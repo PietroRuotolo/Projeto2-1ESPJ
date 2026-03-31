@@ -1,0 +1,68 @@
+//Variaveis globais
+
+:root{
+    --color1:goldenrod;
+    --color2:purple;
+    --color3:yellow;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:transparent;
+}
+#container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:10px;
+}
+header{
+    background:yellow;
+    text-align:center;
+    padding:20px;
+}
+#conteudo-principal{
+    display:flex;
+    flex-direction:row;
+    gap:200px;
+    width:100%;
+}
+#conteudo{
+
+    //background:var(--color1);
+    background:goldenrod;
+    text-align:center;
+    padding:50px;
+}
+aside{
+    //background:var(--color3);
+    background:red;
+    padding:20px;
+    flex:1;
+}
+footer{
+    //background:var(--color1);
+    background:green;
+    padding:20px;
+}
+
+//Responsividade
+
+@media(max-width:700px){
+    #container{
+        flex-direction:column;
+    }
+    #conteudo-principal{
+        display:flex;
+        flex-grow:1; //Ocupa o espaço todo
+    }
+    #conteudo{
+        flex:2;
+    }
+    aside{
+        flex:1;
+    }
+}
